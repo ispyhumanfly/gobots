@@ -1,0 +1,27 @@
+{
+  "name": "gobots",
+  "version": "1.0.0",
+  "description": "A flexible framework for creating intelligent bots for Discord, Slack and IRC.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ispyhumanfly/gobots.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ispyhumanfly/gobots/issues"
+  },
+  "homepage": "https://github.com/ispyhumanfly/gobots#readme",
+  "dependencies": {
+    "@types/node": "^8.0.33",
+    "discord.js": "^11.2.1",
+    "irc-upd": "^0.8.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3",
+    "yargs": "^9.0.1"
+  }
+}
