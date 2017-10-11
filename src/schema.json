@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Product",
+    "description": "A product from Acme's catalog",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The unique identifier for a product",
+            "type": "string"
+        },
+        "description": {
+            "description": "The unique identifier for a product",
+            "type": "string"
+        },
+        "author": {
+            "description": "The unique identifier for a product",
+            "type": "string"
+        },
+        "version": {
+            "description": "The unique identifier for a product",
+            "type": "string"
+        }
+
+    },
+    "required": ["name", "description", "author", "version"]
+}

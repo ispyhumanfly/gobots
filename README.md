@@ -1,5 +1,5 @@
-# gobots
-A flexible framework for creating intelligent bots for Discord, Slack and IRC.
+# Gobots
+A declarative framework for creating intelligent chat bots.
 
 # License
 MIT

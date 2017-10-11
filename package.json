@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ispyhumanfly/gobots#readme",
   "dependencies": {
     "@types/node": "^8.0.33",
+    "bunyan": "^1.8.12",
     "discord.js": "^11.2.1",
     "irc-upd": "^0.8.0",
     "ts-node": "^3.3.0",
