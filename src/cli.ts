@@ -10,7 +10,7 @@ new Gobot.Client({
     services: {
         enabled: ["discord", "irc"],
         discord: {
-            token: "foo",
+            token: "super_crazy_long_string",
             actions: this.actions
         },
         irc: {
@@ -31,4 +31,4 @@ new Gobot.Client({
             "Eliza, who created you?": `Hi, I was created by ${this.author}.`
         }
     ]
-}).listen(true)
+}).listen({verbose: true})
