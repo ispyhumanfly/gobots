@@ -6,7 +6,7 @@ A declarative framework for creating intelligent chatbots.
     new Gobot.Server({
         name: "Eliza",
         description: "Communication between man and machine.",
-        author: "Joseph Weizenbaum",
+        author: "Dan Stephenson",
         version: "2.0.0",
         services: {
             enabled: ["discord", "irc"],
