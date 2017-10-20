@@ -14,7 +14,7 @@
     "url": "git+https://github.com/ispyhumanfly/gobots.git"
   },
   "author": "Dan Stephenson (ispyhumanfly)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ispyhumanfly/gobots/issues"
   },
