@@ -2,7 +2,7 @@
 
 import * as Gobot from "./lib"
 
-new Gobot.Client({
+new Gobot.Server({
     name: "Eliza",
     description: "Communication between man and machine.",
     author: "Joseph Weizenbaum",
@@ -10,17 +10,15 @@ new Gobot.Client({
     services: {
         enabled: ["discord", "irc"],
         discord: {
-            token: "super_crazy_long_string",
-            actions: this.actions
+            token: "super_crazy_long_string"
         },
         irc: {
             servers: [
                 {
                     address: "irc.freenode.net",
-                    nickname: "foo",
+                    nickname: `${this.name}`,
                     password: "bar",
-                    channels: ["#art", "#scene"],
-                    actions: this.actions
+                    channels: ["#gobot", "#gobots"]
                 }
             ]
         }
@@ -31,4 +29,4 @@ new Gobot.Client({
             "Eliza, who created you?": `Hi, I was created by ${this.author}.`
         }
     ]
-}).listen({verbose: true})
+}).start({verbose: true})

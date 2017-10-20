@@ -4,16 +4,16 @@ import * as Discord from "discord.js"
 import * as IRC from "irc-upd"
 import * as Bunyan from "bunyan"
 
-export class Client {
+export class Server {
 
-    protected config: any
+    public gobot: any
 
-    constructor(config: Object){
+    constructor(gobot: Object){
 
-        this.config = config
+        this.gobot = gobot
 
-        this.config.log = Bunyan.createLogger({
-            name: this.config.name,
+        this.gobot.log = Bunyan.createLogger({
+            name: this.gobot.name,
             streams: [
                 {
                     level: 'info',
@@ -25,32 +25,49 @@ export class Client {
                 },
                 {
                     level: 'debug',
-                    path: `${this.config.name}.log`
+                    path: `${this.gobot.name}.log`
                 }
             ]
         })
     }
-    listen(options: any) {
-        this.config.services.enabled.forEach(service => {
+    start(options: any) {
+        this.gobot.services.enabled.forEach(service => {
 
             if(service == "discord") {
                 let client = new Discord.Client()
 
                 if(options.verbose)
-                    this.config.log.info("Listening on Discord...")
+                    this.gobot.log.info("Listening on Discord...")
+
+                client.on("ready", () => {
+                    console.log("I am ready!")
+                })
+
+                client.on("message", message => {
+                    if (message.content === "ping") {
+                        message.reply("pong");
+                    }
+                    if (message.content === "How much MS you take?") {
+                        message.reply("A shit load...");
+                    }
+                    console.log(`${message.author.username}: ${message.content}`)
+                })
+
+                client.login("MjU4ODg2NDIxMDUyNTIyNDk4.DLoc1A.DHvne6EIslspUntLkpf73AD8PRE")
+
             }
 
             if(service == "irc") {
 
                 let client = new IRC.Client(
-                    this.config.services.irc.servers[0].address,
-                    this.config.services.irc.servers[0].nickname,
+                    this.gobot.services.irc.servers[0].address,
+                    this.gobot.services.irc.servers[0].nickname,
                 {
-                    channels: this.config.services.irc.servers[0].channels,
+                    channels: this.gobot.services.irc.servers[0].channels,
                 })
 
                 if(options.verbose)
-                    this.config.log.info("Listening on IRC...")
+                    this.gobot.log.info("Listening on IRC...")
             }
         })
     }
