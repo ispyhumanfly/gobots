@@ -4,13 +4,16 @@
   "description": "A flexible framework for creating intelligent bots for Discord, Slack and IRC.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release:major": "node_modules/.bin/shelljs-release major",
+    "release:minor": "node_modules/.bin/shelljs-release minor",
+    "release:patch": "node_modules/.bin/shelljs-release patch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ispyhumanfly/gobots.git"
   },
-  "author": "",
+  "author": "Dan Stephenson (ispyhumanfly)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ispyhumanfly/gobots/issues"
@@ -21,6 +24,9 @@
     "bunyan": "^1.8.12",
     "discord.js": "^11.2.1",
     "irc-upd": "^0.8.0",
+    "shelljs": "^0.7.8",
+    "shelljs-release": "^0.2.0",
+    "shx": "^0.2.2",
     "ts-node": "^3.3.0",
     "typescript": "^2.5.3",
     "yargs": "^9.0.1"

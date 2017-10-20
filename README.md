@@ -1,7 +1,6 @@
 # Gobots
 A declarative framework for creating intelligent chatbots.
 ## Synopsis
-
     import * as Gobot from "gobots"
 
     new Gobot.Server({
