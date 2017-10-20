@@ -2,7 +2,7 @@
   "name": "gobots",
   "version": "1.0.0",
   "description": "A flexible framework for creating intelligent bots for Discord, Slack and IRC.",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release:major": "node_modules/.bin/shelljs-release major",
