@@ -1,13 +1,10 @@
 {
   "name": "gobots",
   "version": "1.0.0",
-  "description": "A flexible framework for creating intelligent bots for Discord, Slack and IRC.",
+  "description": "A framework for creating intelligent bots for Discord, Slack and IRC.",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release:major": "node_modules/.bin/shelljs-release major",
-    "release:minor": "node_modules/.bin/shelljs-release minor",
-    "release:patch": "node_modules/.bin/shelljs-release patch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,13 +17,12 @@
   },
   "homepage": "https://github.com/ispyhumanfly/gobots#readme",
   "dependencies": {
+    "@slack/client": "^4.8.0",
     "@types/node": "^8.0.33",
+    "@types/yargs": "^12.0.8",
     "bunyan": "^1.8.12",
     "discord.js": "^11.2.1",
     "irc-upd": "^0.8.0",
-    "shelljs": "^0.7.8",
-    "shelljs-release": "^0.2.0",
-    "shx": "^0.2.2",
     "ts-node": "^3.3.0",
     "typescript": "^2.5.3",
     "yargs": "^9.0.1"
