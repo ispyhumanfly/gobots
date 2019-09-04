@@ -1,23 +1,20 @@
-/* tslint:enabled */
+import Gobots from "../src/gobots"
 
-import * as Gobot from "./lib"
-
-new Gobot.Server({
+new Gobots({
     name: "Eliza",
     description: "Communication between man and machine.",
-    author: "Joseph Weizenbaum",
-    version: "2.0.0",
+    author: "Dan Stephenson",
+    version: "1.0.0",
     services: {
         enabled: ["discord", "irc"],
         discord: {
-            token: "super_crazy_long_string"
+            token: "NjE4ODE1NzAzMjA5NzM4MjQw.XW_M-A.yblvfkvVgPxWoe-jgglftqd7kik"
         },
         irc: {
             servers: [
                 {
                     address: "irc.freenode.net",
-                    nickname: `${this.name}`,
-                    password: "bar",
+                    nickname: "danallmight",
                     channels: ["#gobot", "#gobots"]
                 }
             ]
@@ -25,8 +22,8 @@ new Gobot.Server({
     },
     actions: [
         {
-            "Eliza, what version are you?": `Hi, I am version ${this.version}.`,
-            "Eliza, who created you?": `Hi, I was created by ${this.author}.`
+            question: "The question.",
+            response: "The response"
         }
     ]
 }).start({verbose: true})

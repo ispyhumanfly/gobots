@@ -2,7 +2,7 @@
   "name": "gobots",
   "version": "1.0.0",
   "description": "A framework for creating intelligent bots for Discord, Slack and IRC.",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,6 @@
     "@slack/client": "^4.8.0",
     "@types/node": "^8.0.33",
     "@types/yargs": "^12.0.8",
-    "bunyan": "^1.8.12",
     "discord.js": "^11.2.1",
     "irc-upd": "^0.8.0",
     "ts-node": "^3.3.0",
