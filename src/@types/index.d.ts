@@ -1,4 +1,3 @@
-
 export interface GobotConfigOptions {
 
     name: string,

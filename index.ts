@@ -1,4 +1,2 @@
-/* tslint:enabled */
-
-import * as Gobot from "./dist/lib"
-export default Gobot
+import Gobots from "dist/gobots"
+export default Gobots

@@ -1,4 +1,4 @@
-import Gobots from "../src/gobots"
+import Gobots from "../src/gobots.lib"
 
 new Gobots({
     name: "Eliza",
@@ -26,4 +26,4 @@ new Gobots({
             response: "The response"
         }
     ]
-}).start({verbose: true})
+}).start({ verbose: true })

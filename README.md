@@ -1,6 +1,9 @@
 # Gobots
+
 A declarative framework for creating intelligent chatbots.
+
 ## Synopsis
+
     import * as Gobot from "gobots"
 
     new Gobot.Server({
@@ -33,6 +36,9 @@ A declarative framework for creating intelligent chatbots.
     }).start({verbose: true})
 
 # License
+
 MIT
+
 # Copyright
-2017 Dan Stephenson (ispyhumanfly)
+
+2017 - 2919 Dan Stephenson (ispyhumanfly)

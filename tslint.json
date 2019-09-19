@@ -1,1 +1,54 @@
-{}
+{
+    "$schema": "http://json.schemastore.org/tslint",
+    "extends": ["tslint:latest", "tslint-config-prettier"],
+    "rules": {
+        "class-name": true,
+        "jsdoc-format": [true, "check-multiline-start"],
+        "completed-docs": [false, "classes", "functions", "methods"],
+        "comment-format": [true, "check-space", "check-lowercase", { "ignore-words": ["TODO", "HACK", "NOTE"] }],
+        "no-duplicate-variable": true,
+        "no-eval": true,
+        "no-internal-module": true,
+        "no-unsafe-finally": true,
+        "no-var-keyword": true,
+        "triple-equals": [true, "allow-null-check"],
+        "variable-name": [true, "ban-keywords", "check-format"],
+        "no-submodule-imports": [
+            true,
+            "common",
+            "components",
+            "lodash",
+            "nativescript-ui-dataform",
+            "nativescript-ui-listview",
+            "tns-core-modules",
+            "nativescript-plugin-firebase",
+            "pdfmake",
+            "nativescript-ui-autocomplete",
+            "core-js",
+            "@amcharts/amcharts4"
+        ],
+        "no-implicit-dependencies": [true, "dev", ["common", "components"]],
+        "no-console": false,
+        "semicolon": [false, "always"],
+        "indent": [true, "spaces", 4],
+        "max-line-length": [true, 150],
+        "object-literal-sort-keys": false,
+        "interface-name": [true, "never-prefix"],
+        "no-object-literal-type-assertion": false,
+        "no-angle-bracket-type-assertion": false,
+        "no-shadowed-variable": false,
+        "no-for-in-array": true,
+        "one-variable-per-declaration": false,
+        "curly": false,
+        "member-ordering": [
+            true,
+            {
+                "alphabetize": true,
+                "order": "statics-first"
+            }
+        ]
+    },
+    "linterOptions": {
+        "exclude": ["node_modules/*"]
+    }
+}
